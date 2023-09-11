@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/background">
+    
+    <TextView
+        android:id="@+id/text_valor_A"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="A: "
+        android:textColor="@color/white"
+        android:layout_marginTop="100dp"
+        android:layout_marginLeft="50dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    
+    <EditText
+        android:id="@+id/valor_A"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="100dp"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:inputType="number"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/text_valor_A"
+        android:background="@drawable/background_edit_text"/>
+
+    <TextView
+        android:id="@+id/text_valor_B"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="B: "
+        android:layout_marginTop="100dp"
+        android:layout_marginLeft="50dp"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/valor_A"/>
+
+    <EditText
+        android:id="@+id/valor_B"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="100dp"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:inputType="number"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/text_valor_B"
+        android:background="@drawable/background_edit_text"/>
+
+    <TextView
+        android:id="@+id/text_valor_C"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="C: "
+        android:layout_marginTop="100dp"
+        android:layout_marginLeft="50dp"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/valor_B"/>
+
+    <EditText
+        android:id="@+id/valor_C"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginRight="50dp"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:inputType="number"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/text_valor_C"
+        android:background="@drawable/background_edit_text"/>
+
+    <TextView
+        android:id="@+id/result_A"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Δ = b² - 4.a.c"
+        android:layout_marginTop="50dp"
+        android:textColor="@color/orange"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/valor_B"/>
+
+
+
+    <TextView
+        android:id="@+id/result_C"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Δ = "
+        android:layout_marginTop="20dp"
+        android:textColor="@color/orange"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/result_A"/>
+
+    <Button
+        android:id="@+id/bt_calcular"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginLeft="50dp"
+        android:backgroundTint="@color/orange"
+        android:text="Calcular"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/result_C"/>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
